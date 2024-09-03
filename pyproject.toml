@@ -9,3 +9,8 @@ dependencies = [
     "Flask",
     "redis",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
