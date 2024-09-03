@@ -2,3 +2,4 @@
 src/page_tracker.egg-info
 build/
 **/__pycache__/
+.pytest_cache
