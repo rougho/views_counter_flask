@@ -7,13 +7,18 @@ services:
       - "redis-volume:/data"
     web-service:
       build: ./web
-      ports: "80:5000"
+      ports: 
+        - "80:5000"
       envirement:
         REDIS_URL: "redis://redis-service:6379"
-      network: backend-network
-      depends_on: redis-service
+      networks: 
+        - backend-network
+      depends_on: 
+        - redis-service
 
-networks: backend-network
+networks: 
+  - backend-network
 
-volumes: redis-volume
+volumes: 
+  - redis-volume
 
